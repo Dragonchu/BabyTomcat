@@ -6,8 +6,8 @@ package babytomcat;
 public class App {
 
     public static void main(String[] args) {
-        HttpServer server = new HttpServer();
-        System.out.println(HttpServer.WEB_ROOT);
+        HttpServer1 server = new HttpServer1();
+        System.out.println(Constants.WEB_ROOT);
         server.await();
     }
 }
