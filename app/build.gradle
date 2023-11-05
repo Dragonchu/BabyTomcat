@@ -31,8 +31,7 @@ dependencies {
     // This dependency is used by the application.
     implementation 'com.google.guava:guava:32.1.1-jre'
 
-    // https://mvnrepository.com/artifact/jakarta.servlet/jakarta.servlet-api
-    implementation group: 'jakarta.servlet', name: 'jakarta.servlet-api', version: '6.0.0'
+    implementation fileTree('lib') { include '*.jar' }
 }
 
 // Apply a specific Java toolchain to ease working on different environments.

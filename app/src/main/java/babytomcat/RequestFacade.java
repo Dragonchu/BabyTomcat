@@ -1,19 +1,14 @@
 package babytomcat;
 
-import jakarta.servlet.AsyncContext;
-import jakarta.servlet.DispatcherType;
-import jakarta.servlet.RequestDispatcher;
-import jakarta.servlet.ServletConnection;
-import jakarta.servlet.ServletContext;
-import jakarta.servlet.ServletInputStream;
-import jakarta.servlet.ServletRequest;
-import jakarta.servlet.ServletResponse;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.Enumeration;
 import java.util.Locale;
 import java.util.Map;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletInputStream;
+import javax.servlet.ServletRequest;
 
 public class RequestFacade implements ServletRequest {
 
@@ -39,73 +34,9 @@ public class RequestFacade implements ServletRequest {
     }
 
     @Override
-    public int getRemotePort() {
-        return 0;
-    }
-
-    @Override
-    public String getLocalName() {
+    public String getRealPath(String s) {
         return null;
-    }
 
-    @Override
-    public String getLocalAddr() {
-        return null;
-    }
-
-    @Override
-    public int getLocalPort() {
-        return 0;
-    }
-
-    @Override
-    public ServletContext getServletContext() {
-        return null;
-    }
-
-    @Override
-    public AsyncContext startAsync() throws IllegalStateException {
-        return null;
-    }
-
-    @Override
-    public AsyncContext startAsync(ServletRequest servletRequest, ServletResponse servletResponse) throws IllegalStateException {
-        return null;
-    }
-
-    @Override
-    public boolean isAsyncStarted() {
-        return false;
-    }
-
-    @Override
-    public boolean isAsyncSupported() {
-        return false;
-    }
-
-    @Override
-    public AsyncContext getAsyncContext() {
-        return null;
-    }
-
-    @Override
-    public DispatcherType getDispatcherType() {
-        return null;
-    }
-
-    @Override
-    public String getRequestId() {
-        return null;
-    }
-
-    @Override
-    public String getProtocolRequestId() {
-        return null;
-    }
-
-    @Override
-    public ServletConnection getServletConnection() {
-        return null;
     }
 
     @Override
@@ -121,11 +52,6 @@ public class RequestFacade implements ServletRequest {
     @Override
     public int getContentLength() {
         return request.getContentLength();
-    }
-
-    @Override
-    public long getContentLengthLong() {
-        return 0;
     }
 
     @Override
