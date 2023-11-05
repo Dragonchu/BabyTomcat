@@ -6,7 +6,7 @@ package babytomcat;
 public class App {
 
     public static void main(String[] args) {
-        HttpServer1 server = new HttpServer1();
+        HttpServer2 server = new HttpServer2();
         System.out.println(Constants.WEB_ROOT);
         server.await();
     }

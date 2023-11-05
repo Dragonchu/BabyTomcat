@@ -7,7 +7,7 @@ import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 
-public class HttpServer1 {
+public class HttpServer2 {
 
     /** WEB_ROOT is the directory where our HTML and other files reside.
      *  For this package, WEB_ROOT is the "webroot" directory under the working
@@ -53,7 +53,7 @@ public class HttpServer1 {
                 // check if this is a request for a servlet or a static resource
                 // a request for a servlet begins with "/servlet/"
                 if (request.getUri().startsWith("/servlet/")) {
-                    ServletProcessor1 processor = new ServletProcessor1();
+                    ServletProcessor2 processor = new ServletProcessor2();
                     processor.process(request, response);
                 }
                 else {
