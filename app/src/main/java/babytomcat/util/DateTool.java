@@ -77,7 +77,7 @@ import java.text.*;
 public class DateTool {
 
     private static StringManager sm =
-        StringManager.getManager("org.apache.catalina.util");
+        StringManager.getManager("bundle");
 
     /** US locale - all HTTP dates are in english
      */

@@ -1,0 +1,1 @@
+curl -i 'http://localhost:8080/servlet/ModernServlet?userName=tarzan&password=pwd' --http0.9

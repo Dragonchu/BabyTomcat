@@ -1,7 +1,6 @@
 # Compiled class file
 *.class
-!PrimitiveServlet.class
-!BadPrimitiveServlet.class
+!app/webroot/*.class
 
 # Log file
 *.log
