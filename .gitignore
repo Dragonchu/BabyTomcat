@@ -1,6 +1,7 @@
 # Compiled class file
 *.class
 !PrimitiveServlet.class
+!BadPrimitiveServlet.class
 
 # Log file
 *.log
