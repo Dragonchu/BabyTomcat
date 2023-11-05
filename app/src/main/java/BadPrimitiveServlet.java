@@ -1,4 +1,4 @@
-import babytomcat.Request;
+import babytomcat.connector.http.HttpRequest;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.Servlet;
@@ -15,11 +15,9 @@ public class BadPrimitiveServlet implements Servlet {
 
     public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
         PrintWriter out = response.getWriter();
-        if (request instanceof Request){
+        if (request instanceof HttpRequest) {
             out.println("Downcast successfully");
-            Request request1 = (Request) request;
-            request1.parse();
-        }else {
+        } else {
             out.println("Downcast fail");
         }
     }

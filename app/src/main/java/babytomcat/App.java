@@ -3,11 +3,12 @@
  */
 package babytomcat;
 
+import babytomcat.connector.http.HttpConnector;
+
 public class App {
 
     public static void main(String[] args) {
-        HttpServer2 server = new HttpServer2();
-        System.out.println(Constants.WEB_ROOT);
-        server.await();
+        HttpConnector connector = new HttpConnector();
+        connector.start();
     }
 }
