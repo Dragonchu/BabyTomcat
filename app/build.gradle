@@ -43,10 +43,14 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'babytomcat.App'
+    mainClass = 'startup.Bootstrap'
 }
 
 tasks.named('test') {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
+}
+
+compileJava{
+    options.release = 8
 }
