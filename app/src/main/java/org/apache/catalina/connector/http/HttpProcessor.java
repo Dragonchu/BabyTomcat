@@ -876,8 +876,8 @@ final class HttpProcessor
      * @param socket The socket on which we are connected to the client
      */
     private void process(Socket socket) {
-        boolean ok = true;
-        boolean finishResponse = true;
+        boolean ok = true; //ok 指代处理过程中是否发现错误
+        boolean finishResponse = true; // 指代finishResponse方法是否应该被调用
         SocketInputStream input = null;
         OutputStream output = null;
 
@@ -916,9 +916,9 @@ final class HttpProcessor
 
                     parseConnection(socket);
                     parseRequest(input, output);
-                    if (!request.getRequest().getProtocol()
-                        .startsWith("HTTP/0"))
+                    if (!request.getRequest().getProtocol().startsWith("HTTP/0")){
                         parseHeaders(input);
+                    }
                     if (http11) {
                         // Sending a request acknowledge back to the client if
                         // requested.
