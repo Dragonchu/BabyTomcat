@@ -12,8 +12,8 @@ public final class Bootstrap {
             connector.initialize();
             connector.start();
 
-            // make the application wait until we press any key.
-            System.in.read();
+            // make the application wait until we press crtl+c.
+            while(true){}
         } catch (Exception e) {
             e.printStackTrace();
         }
