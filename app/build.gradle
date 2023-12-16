@@ -43,7 +43,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = 'startup.Bootstrap'
+    mainClass = project.findProperty("chooseMain").toString()
 }
 
 tasks.named('test') {
